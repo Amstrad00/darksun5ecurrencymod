@@ -1,0 +1,14 @@
+{
+  "name": "darksun5ecurrencymod",
+  "title": "Dark Sun 5e Currency Mod",
+  "description": "A simple module that modifies 5e's default currency to match the Dark Sun setting.",
+  "author": "Amstrad",
+  "email": "hated.proud@gmail.com",
+  "systems": ["dnd5e"],
+  "scripts": [
+	"scripts/currency.js"
+  ],
+  "version": "1.0.0",
+  "minimumCoreVersion": "0.4.?"
+  
+}
