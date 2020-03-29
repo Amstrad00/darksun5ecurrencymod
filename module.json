@@ -9,6 +9,8 @@
 	"scripts/currency.js"
   ],
   "version": "1.0.0",
+  "manifest": "https://raw.githubusercontent.com/Amstrad00/darksun5ecurrencymod/master/module.json",
+  "download": "https://github.com/Amstrad00/darksun5ecurrencymod/archive/master.zip",
   "minimumCoreVersion": "0.4.?"
   
 }
