@@ -1,10 +1,12 @@
 Hooks.on('renderActorSheet5eCharacter', (sheet, html) => {
   html.find('.denomination.ep').remove();
   html.find('[name="data.currency.ep"]').remove();
-  html.find('.denomination.pp').text('Gold');
-  html.find('.denomination.gp').text('Silver');
-  html.find('.denomination.sp').text('Ceramic');
-  html.find('.denomination.cp').text('Bits');
+  html.find('.denomination.pp').remove();
+  html.find('[name="data.currency.pp"]').remove();
+  html.find('.denomination.cp').remove();
+  html.find('[name="data.currency.cp"]').remove();
+  html.find('.denomination.gp').text('Drachma');
+  html.find('.denomination.sp').text('=Lepta');
   // etc.
 });
   
@@ -17,9 +19,7 @@ Hooks.once('ready', () => {
     const curr = duplicate(this.actor.data.data.currency);
     console.log(curr);
     const convert = {
-      cp: {into: "sp", each: 10},
-      sp: {into: "gp", each: 10 },
-      gp: {into: "pp", each: 10}
+      sp: {into: "gp", each: 100}
     };
     for ( let [c, t] of Object.entries(convert) ) {
       let change = Math.floor(curr[c] / t.each);
